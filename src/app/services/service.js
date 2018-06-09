@@ -1,4 +1,5 @@
 import angular from 'angular';
+import keywordSearch from './keywordSearch';
 
 export default angular.module('guardianAngelservice', [])
     .service('commonService', commonService);
@@ -7,22 +8,7 @@ function commonService($http) {
     var self = this;
     self.processData = function(){
         console.log("Inside processData");
-        var naturalDisaster_keywords = [
-            'earthquake',
-            'volc',
-            'tsunami',
-            'shooting',
-            'thunderstorm',
-            'flood',
-            'eruption',
-            'drought',
-            'hailstorm',
-            'tornadoes',
-            'cyclone',
-            'avalanches',
-            'landslide',
-            'petapa',
-            'carlos soto'];
+        var naturalDisaster_keywords = keywordSearch;
 
             $http({
                 method: 'GET',
