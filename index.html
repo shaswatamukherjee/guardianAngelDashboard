@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset=" utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport" content="width = device-width, minimal-ui, initial-scale = 1, user-scalable = no" />
+        <meta name="apple-mobile-web-app-title" content="Demo App">
+        <title>Guardian Angel Dashboard</title>
+        <base href="/">
+        <link rel="stylesheet" href="styles/core.css">
+        <script src="vendor/shim.js"></script>
+        <script src="vendor/system.src.js"></script>
+        <script src="systemjs.config.js"></script>
+        <script>
+            System.import('app')
+                .catch(function (err) {
+                    console.log(err);
+                });
+        </script>
+    </head>
+    <body ng-cloak ng-controller="guardianAngelDashboardController as guardianAngelDashboard">
+        <activate-message
+            show-error="guardianAngel.showError"
+            error-message="guardianAngel.errorMessage"
+            success-message="guardianAngel.successMessage"
+            show-success="guardianAngel.showSuccess">
+        </activate-message>
+        <ui-view></ui-view>
+    </body>
+</html>

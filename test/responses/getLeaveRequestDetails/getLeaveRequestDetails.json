@@ -1,0 +1,25 @@
+{
+    "leaveRequests":[
+        {
+            "name": "Shaswata Mukherjee",
+            "empId": "587768",
+            "requestId": "123",
+            "typeOfLeave": "Sick Leave",
+            "status": "Open"
+        },
+        {
+            "name": "Shaswata Mukherjee",
+            "empId": "587768",
+            "requestId": "128",
+            "typeOfLeave": "Annual Leave",
+            "status": "Closed"
+        },
+        {
+            "name": "Shaswata Mukherjee",
+            "empId": "587768",
+            "requestId": "126",
+            "typeOfLeave": "Comp Off",
+            "status": "Open"
+        }
+    ]
+}

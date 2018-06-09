@@ -1,0 +1,13 @@
+{
+  "output": {
+    "response": [{
+      "type": "Annual Leave",
+      "appliedLeaveCount": 20,
+      "leaveBalance": 0
+    }],
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

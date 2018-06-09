@@ -1,0 +1,17 @@
+{
+    "output": {
+        "response": [{
+            "requestId": "434643",
+            "empId": "638883",
+            "startDate": "                                                                                          -01-18",
+            "endDate": "12-01-18",
+            "leaveAppliedOn": "01-01-18",
+            "typeOfLeave": "Annual Leave",
+            "reason": "Some reason"
+        }],
+        "message": {
+            "messageCode": "RM_0000",
+            "messageType": "INFO"
+        }
+    }
+}

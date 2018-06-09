@@ -1,0 +1,69 @@
+{
+  "output": {
+    "response": [{
+      "empName": "Shaswata Mukherjee",
+      "empId": "638883",
+      "gender": "M",
+      "location": "onsite",
+      "team": "Securities 4",
+      "grid": "Securities",
+      "domain": "R&RB",
+      "authRules": [
+        {"rule": "PROFILE_VIEW", "value": true},
+        {"rule": "TIMESHEET_EDIT", "value": true}
+      ]
+    }, {
+      "empName": "Santhanakumar Seniappa",
+      "empId": "45785",
+      "gender": "M",
+      "location": "onsite",
+      "team": "Securities 4",
+      "grid": "Securities",
+      "domain": "R&RB",
+      "authRules": [
+        {"rule": "PROFILE_VIEW", "value": true},
+        {"rule": "TIMESHEET_EDIT", "value": false}
+      ]
+    }, {
+      "empName": "Akash N Gugale",
+      "empId": "650019",
+      "gender": "M",
+      "location": "onsite",
+      "team": "Close Knits",
+      "grid": "MID",
+      "domain": "XYZ",
+      "authRules": [
+        {"rule": "PROFILE_VIEW", "value": true},
+        {"rule": "TIMESHEET_EDIT", "value": true}
+      ]
+    }, {
+      "empName": "Manorama Pathak",
+      "empId": "638003",
+      "gender": "F",
+      "location": "onsite",
+      "team": "Case Management",
+      "grid": "Functions",
+      "domain": "International",
+      "authRules": [
+        {"rule": "PROFILE_VIEW", "value": true},
+        {"rule": "TIMESHEET_EDIT", "value": false}
+      ]
+    }, {
+      "empName": "Ravi Thorwe",
+      "empId": "638103",
+      "gender": "M",
+      "location": "offshore",
+      "team": "SID",
+      "grid": "MID",
+      "domain": "R&PB",
+      "authRules": [
+        {"rule": "PROFILE_VIEW", "value": true},
+        {"rule": "TIMESHEET_EDIT", "value": false}
+      ]
+    }],
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

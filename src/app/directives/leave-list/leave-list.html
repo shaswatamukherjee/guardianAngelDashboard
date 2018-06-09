@@ -1,0 +1,14 @@
+<div cg-busy="cgBusyOptions">
+    <table class="table">
+        <tbody>
+            <tr ng-repeat="l in leaves">
+                <td ng-bind="l.type"></td>
+                <td><span ng-bind="l.appliedLeaveCount"></span><span>  Days</span></td>
+                <td ng-if=""><span ng-bind="l.leaveBalance"></span><span>  Days</span></td>
+                <td>
+                    <a href="" ng-click="applyLeave(l.type)">Apply leave</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,78 @@
+{
+  "output": {
+    "response": {
+      "empId": "638883",
+      "name": "Shaswata Mukherjee",
+      "email": null,
+      "unit": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["EASSOA", "ABNFST"]
+      },
+      "role": {
+        "required": 0,
+        "readOnly": 0,
+        "oneOf": ["System Engineer","Senior System Engineer","Technology Analyst","Technology Lead","Assistant Consultant","Senior Consultant","Project Manager"]
+      },
+      "baseLocation": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Pune","Mysore"]
+      },
+      "currentLocation": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Pune","Mysore","Amsterdam"]
+      },
+      "skillsets": "Tibco/ Anguler JS",
+      "managerId": "20557",
+      "clientId": "404906",
+      "clientName": "ABN",
+      "clientEmail": "Shaswata.Mukherjee@nl.abnamro.com",
+      "workingLocation": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Offshore","Onsite"]
+      },
+      "experienceForClient": "51",
+      "retentionCase": "NA",
+      "assignmentStartDate": "17-10-2014",
+      "assignmentEndDate": "31-12-2018",
+      "workPeriod": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Long Term","Short Term","Landed"]
+      },
+      "visaExpiryDate": "04-09-2018",
+      "RPExpiryDate": null,
+      "onsiteLocation": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Amsterdam"]
+      },
+      "clientRoleLevel": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Junior","Senior","Expert"]
+      },
+      "clientRole": {
+        "required": 1,
+        "readOnly": 0,
+        "oneOf": ["Application Designer","Application Programmer","Application Programmer (L)","IT Architect","Project Manager","Team Lead","Technology Consultant","Test Manager","Tester","Tester (L)"]
+      },
+      "allocations": [{
+        "role": "Application Designer",
+        "roleLevel": "Expert",
+        "location": "AMSTERDAM",
+        "stream": "Investments",
+        "startDate": "01-04-2018",
+        "endDate": "31-12-2018",
+        "allocationPercentage": "100"
+      }]
+    },
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

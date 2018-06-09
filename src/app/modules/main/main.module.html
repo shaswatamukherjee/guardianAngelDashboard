@@ -1,0 +1,30 @@
+<div id="page" ng-controller="mainController as mainCtrl">
+    <div id="header" ng-init="mainCtrl.init()">
+        <nav class="nav-header" role="navigation">
+            <div class="nav-header-primary">
+                <ul id="top-menu" class="nav">
+                    <li ng-class="{'active-list-item': selectedListItem === 'applicationForm'}">
+                        <a ng-if="mainCtrl.labelIndicator">Abn Amro Guardian Angel User List</a>
+                        <a ng-if="!mainCtrl.labelIndicator">NGO Guardian Angel User List</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="main-area">
+        <div ng-if="mainCtrl.buttonIndicator">
+            <div class="col-sm-12">
+                <button class="btn btn-primary" ng-click="tabClicked(0)">AbnAmro Dashboard</button>
+            </div>
+            <div class="col-sm-12">
+
+            </div>
+            <div class="col-sm-12">
+                <button class="btn btn-primary" ng-click="tabClicked(1)">NGO Dashboard</button>
+            </div>
+        </div>
+        <div ng-if="!mainCtrl.buttonIndicator" class="container clearfix">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>

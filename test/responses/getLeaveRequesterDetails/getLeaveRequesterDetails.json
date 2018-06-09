@@ -1,0 +1,22 @@
+{
+    "leaveRequesters":[
+        {
+            "name": "Shaswata Mukherjee",
+            "empId": "587768",
+            "requestId": "123",
+            "typeOfLeave": "Sick Leave"
+        },
+        {
+            "name": "Hemanshu Banga",
+            "empId": "658693",
+            "requestId": "127",
+            "typeOfLeave": "Annual Leave"
+        },
+        {
+            "name": "Vishal Shejul",
+            "empId": "764765",
+            "requestId": "126",
+            "typeOfLeave": "Comp Off"
+        }
+    ]
+}

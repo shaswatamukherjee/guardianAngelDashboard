@@ -1,0 +1,14 @@
+{
+  "output": {
+    "response": {
+      "empid": "638883",
+      "empName": "Shaswata",
+      "role": "user",
+      "approver": "hanumantha_madduri@infosys.com"
+    },
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "output": {
+    "response": {
+      "empId": "638883",
+      "name": "Shaswata Mukherjee",
+      "email": null,
+      "unit": "EAISSOA",
+      "role": "Senior Systems Engineer",
+      "baseLocation": "PUNE",
+      "currentLocation": "AMSTERDAM",
+      "skillsets": "Tibco/ Anguler JS",
+      "managerId": "20557",
+      "clientId": "404906",
+      "clientName": "ABN",
+      "clientEmail": "Shaswata.Mukherjee@nl.abnamro.com",
+      "workingLocation": "Onsite",
+      "experienceForClient": "51",
+      "retentionCase": "NA",
+      "assignmentStartDate": "17-10-2014",
+      "assignmentEndDate": "31-12-2018",
+      "workPeriod": "LONGTERM",
+      "visaExpiryDate": "04-09-2018",
+      "RPExpiryDate": null,
+      "onsiteLocation": "AMSTERDAM",
+      "allocations": [{
+        "role": "Application Designer",
+        "roleLevel": "Expert",
+        "location": "AMSTERDAM",
+        "stream": "Investments",
+        "startDate": "01-04-2018",
+        "endDate": "31-12-2018",
+        "allocationPercentage": "100"
+      }]
+    },
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

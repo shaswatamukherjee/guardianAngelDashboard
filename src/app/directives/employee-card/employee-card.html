@@ -1,0 +1,22 @@
+<div class="header">
+    <span ng-bind="employee.empName"></span>
+</div>
+<div class="body">
+    <img ng-src="{{employee.genderImg}}" alt="Employee">
+    <div class="inner-body">
+        <span ng-bind="employee.team"></span>
+        <br>
+        <img tooltip-placement="bottom-right"
+            uib-tooltip="View Profile"
+            class="employee-card-action"
+            src="./images/view_profile.png"
+            ng-if="employee.isProfileViewAllowed"
+            ng-click="gotoProfile(employee.empId)">
+        <img tooltip-placement="bottom-right"
+             uib-tooltip="View/Edit Timesheet"
+             class="employee-card-action"
+             src="./images/view_edit_ts.png"
+             ng-if="employee.isTimesheetAllowed"
+             ng-click="gotoTimesheet(employee.empId)">
+    </div>
+</div>

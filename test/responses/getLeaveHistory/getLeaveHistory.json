@@ -1,0 +1,42 @@
+{
+  "output": {
+    "response": [{
+      "requestId": "434643",
+      "startDate": "08-01-18",
+      "endDate": "12-01-18",
+      "leaveAppliedOn": "01-01-18",
+      "typeOfLeave": "O",
+      "leaveStatus": "Approved",
+      "approverComments": "",
+      "leaveDuration": 2,
+      "name": "Shaswata",
+      "reason": "Some reason"
+    }, {
+      "requestId": "879644",
+      "startDate": "02-01-18",
+      "endDate": "02-01-18",
+      "leaveAppliedOn": "01-01-18",
+      "typeOfLeave": "L",
+      "leaveStatus": "Approved",
+      "approverComments": "",
+      "leaveDuration": 2,
+      "name": "Shaswata",
+      "reason": "Some reason"
+    }, {
+      "requestId": "124576",
+      "startDate": "11-01-18",
+      "endDate": "11-01-18",
+      "leaveAppliedOn": "01-01-18",
+      "typeOfLeave": "C",
+      "leaveStatus": "Approved",
+      "approverComments": "",
+      "leaveDuration": 2,
+      "name": "Shaswata",
+      "reason": "Some reason"
+    }],
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

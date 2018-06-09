@@ -1,0 +1,15 @@
+/*
+uri - /approveLeave/:empid
+i/p:
+requestId String
+status String enum {'approve', 'reject', 'cancel'}
+comments String
+*/
+{
+  "output": {
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

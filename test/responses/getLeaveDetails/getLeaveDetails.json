@@ -1,0 +1,18 @@
+{
+  "output": {
+    "response": [{
+      "leaveDate": "08-01-18",
+      "typeOfLeave": "O"
+    }, {
+      "leaveDate": "02-01-18",
+      "typeOfLeave": "L"
+    }, {
+      "leaveDate": "11-01-18",
+      "typeOfLeave": "C"
+    }],
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "output": {
+    "response": [{
+      "day": "Monday",
+      "date": "January 01",
+      "name": "New Year Day"
+    }, {
+      "day": "Friday",
+      "date": "March 30",
+      "name": "Good Friday"
+    }, {
+      "day": "Sunday",
+      "date": "April 1",
+      "name": "Easter Day"
+    }, {
+      "day": "Monday",
+      "date": "Apr 2",
+      "name": "Easter Monday"
+    }, {
+      "day": "Friday",
+      "date": "Apr 27",
+      "name": "King's Birthday"
+    }, {
+      "day": "Friday",
+      "date": "May 4",
+      "name": "Remembrance Day"
+    }, {
+      "day": "Thursday",
+      "date": "May 10",
+      "name": "Ascension Day"
+    }, {
+      "day": "Sunday",
+      "date": "May 20",
+      "name": "Whit Sunday"
+    }, {
+      "day": "Monday",
+      "date": "May 21",
+      "name": "Whit Monday"
+    }, {
+      "day": "Tuesday",
+      "date": "Dec 25",
+      "name": "Christmas Day"
+    }, {
+      "day": "Wednesday",
+      "date": "Dec 26",
+      "name": "Boxing Day"
+    }],
+    "message": {
+      "messageCode": "RM_0000",
+      "messageType": "INFO"
+    }
+  }
+}
