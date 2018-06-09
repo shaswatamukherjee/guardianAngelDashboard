@@ -34,7 +34,7 @@ gulp.task('build', () => {
             'compile-vendor',
             'move'
         ], () => {
-            //process.exit(0);
+            process.exit(0);
         }
     );
 });
