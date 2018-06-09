@@ -1,6 +1,5 @@
 import angular from 'angular';
 
-
 export default angular.module('guardianAngelDashboard.main', [])
     .controller('mainController', mainController);
 
@@ -24,7 +23,6 @@ function mainController($rootScope, $scope, commonService, $window) {
             self.buttonIndicator = false;
             self.labelIndicator = true;
         }
-        console.log(item);
         $scope.selectedListItem = item;
         $scope.transitionTo('main.' + item);
     };
