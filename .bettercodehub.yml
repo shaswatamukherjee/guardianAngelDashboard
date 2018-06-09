@@ -1,0 +1,12 @@
+component_depth: 3
+languages:
+- javascript
+exclude:
+- /dist/.*
+- /node_modules/.*
+- .*/systemjs.config\.js
+- /styles/.*
+- .*/gulpfile\.js
+- .*/karma.conf\.js
+- /build/.*
+- .*/serviceProxyServer\.js
