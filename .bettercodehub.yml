@@ -10,3 +10,4 @@ exclude:
 - .*/karma.conf\.js
 - /build/.*
 - .*/serviceProxyServer\.js
+- /src/app/services/tweets\.js
