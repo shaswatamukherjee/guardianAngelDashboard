@@ -6,10 +6,10 @@ export default angular.module('guardianAngelDashboard.main.abnAmroDashboard', []
 function abnAmroDashboard($scope, $http){
     var self = this;
     self.init = function () {
-        self.getUserDetails();
-        window.setTimeout(function(){ self.getUserDetails() },30000);
+        self.getCustomerInNeedDetails();
+        window.setTimeout(function(){ self.getCustomerInNeedDetails() },30000);
     };
-    self.getUserDetails = function(){
+    self.getCustomerInNeedDetails = function(){
         $http.get('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/getcustomerinneed')
             .then(response => $scope.userList = response.data)
             .catch(err => alert(err))
@@ -30,7 +30,7 @@ function abnAmroDashboard($scope, $http){
         $http.put('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/updatestatus', postData)
             .then(() => {
                 alert('The situation is reported to the available NGOs');
-                self.getUserDetails()
+                self.getCustomerInNeedDetails()
             });
     };
     self.cancelCustomerAlert = function (customer) {
@@ -41,7 +41,7 @@ function abnAmroDashboard($scope, $http){
         $http.put('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/updatestatus', postData)
             .then(() => {
                 alert('The alert is cancelled for the customer');
-                self.getUserDetails()
+                self.getCustomerInNeedDetails()
             });
     }
 }
