@@ -2,7 +2,6 @@ import angular from 'angular';
 import 'angular-ui-router';
 import 'module/main/main.module.js';
 import 'module/abnAmroDashboard/abnAmroDashboard.js';
-import 'module/ngoDashboard/ngoDashboard.js';
 import 'module/alert/alert.js';
 import 'service/service.js';
 
@@ -10,7 +9,6 @@ angular.module('guardianAngelDashboard', [
     'ui.router',
     'guardianAngelDashboard.main',
     'guardianAngelDashboard.main.abnAmroDashboard',
-    'guardianAngelDashboard.main.ngoDashboard',
     'guardianAngelservice',
     'main.alert'
 ])
@@ -20,7 +18,6 @@ angular.module('guardianAngelDashboard', [
         $stateProvider
             .state('main', { url: '/main', templateUrl: 'app/modules/main/main.module.html' })
             .state('main.abnAmroDashboard', { url: '/abnAmroDashboard', templateUrl: 'app/modules/abnAmroDashboard/abnamroDashboard.html' })
-            .state('main.ngoDashboard', { url: '/ngoDashboard', templateUrl: 'app/modules/ngoDashboard/ngoDashboard.html' })
             .state('main.alert', { url: '/alert?id', templateUrl: 'app/modules/alert/alert.html' })
     })
     .controller('guardianAngelDashboardController', guardianAngelDashboardController);

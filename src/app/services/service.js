@@ -58,5 +58,9 @@ function commonService($http) {
             .then(function (res) {
                 console.log(res);
             });
+        $http.post('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/notifycustomer', {})
+            .then(function (res) {
+                console.log(res);
+            });
     }
 }

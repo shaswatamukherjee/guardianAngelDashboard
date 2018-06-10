@@ -48,6 +48,14 @@ function abnAmroDashboard($scope, $http){
             .then(() => {
                 self.getCustomerInNeedDetails()
             });
+        $http.post('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/notifyembassy', {})
+            .then(function (res) {
+                console.log(res);
+            });
+        $http.post('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/notifyngo', {})
+            .then(function (res) {
+                console.log(res);
+            });
     };
     self.rescue = function (customer) {
         let postData = {
