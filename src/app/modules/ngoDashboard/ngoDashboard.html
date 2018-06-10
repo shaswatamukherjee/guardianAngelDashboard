@@ -1,23 +1,16 @@
-<form name="application" data-novalidate data-ng-submit ng-controller="ngoDashboard as ngoDashboard" ng-init="ngoDashboard.init()">
+<form class="view-area" name="application" data-novalidate data-ng-submit ng-controller="ngoDashboard as ngoDashboard" ng-init="ngoDashboard.init()">
+    <div id="header">
+        <h2>Angel View</h2>
+    </div>
     <div class="container">
-        <h2>NGO User List</h2>
-        <p>Angel View</p>
         <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Status</th>
-            </tr>
-            </thead>
             <tbody>
-            <tr ng-repeat="x in userList">
-                <td>{{x.id}}</td>
-                <td>{{x.name}}</td>
-                <td>{{x.location}}</td>
+            <tr ng-repeat="x in userList" ng-if="x.activity !== 'RESCUED'">
+                <td>{{x.customerName}}</td>
+                <td>{{x.customerLocation}}</td>
+                <td>{{x.description}}</td>
                 <td>
-                    <button class="btn btn-primary" ng-click="updateStatus(x.id)">Update safe</button>
+                    <button class="btn btn-primary-yellow" ng-click="ngoDashboard.rescue(x)">Mark Safe</button>
                 </td>
             </tr>
             </tbody>

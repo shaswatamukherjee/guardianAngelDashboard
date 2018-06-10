@@ -1,29 +1,19 @@
-<div id="page" ng-controller="mainController as mainCtrl">
-    <div id="header" ng-init="mainCtrl.init()">
-        <nav class="nav-header" role="navigation">
-            <div class="nav-header-primary">
-                <ul id="top-menu" class="nav">
-                    <li ng-class="{'active-list-item': selectedListItem === 'applicationForm'}">
-                        <a ng-if="mainCtrl.labelIndicator">Abn Amro Guardian Angel User List</a>
-                        <a ng-if="!mainCtrl.labelIndicator">NGO Guardian Angel User List</a>
-                    </li>
-                </ul>
+<div id="main-page" data-pid="page-nl_prive_ideal" class="bp-page bp-portal" ng-controller="mainController as mainCtrl">
+    <header id="header" class="bp-area --area">
+        <!-- start abn amro header -->
+        <div class="container-fluid-nomax ocf-header" data-pid="layoutHeader-container-ideal-personalspace">
+            <div class="container-fluid">
+                <a ui-sref="about"><span class="ocf-brand ocf-cutout"></span></a>
             </div>
-        </nav>
-    </div>
-    <div id="main-area">
-        <div ng-if="mainCtrl.buttonIndicator">
-            <div class="col-sm-12">
-                <button class="btn btn-primary" ng-click="tabClicked(0)">AbnAmro Dashboard</button>
-            </div>
-            <div class="col-sm-12">
-
-            </div>
-            <div class="col-sm-12">
-                <button class="btn btn-primary" ng-click="tabClicked(1)">NGO Dashboard</button>
+            <!-- begin navigation -->
+            <div class="navbar-container bp-area">
+                <!-- end navigation -->
             </div>
         </div>
-        <div ng-if="!mainCtrl.buttonIndicator" class="container clearfix">
+        <!-- end abn amro header -->
+    </header>
+    <div id="main-area" ng-init="mainCtrl.init()">
+        <div class="container clearfix">
             <ui-view></ui-view>
         </div>
     </div>

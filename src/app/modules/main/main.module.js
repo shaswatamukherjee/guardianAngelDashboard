@@ -3,7 +3,7 @@ import angular from 'angular';
 export default angular.module('guardianAngelDashboard.main', [])
     .controller('mainController', mainController);
 
-function mainController($rootScope, $scope, commonService, $window) {
+function mainController($scope, commonService, $window) {
     var self = this;
 
     self.init = function(){

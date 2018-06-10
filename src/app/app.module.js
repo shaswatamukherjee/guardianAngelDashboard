@@ -26,7 +26,6 @@ angular.module('guardianAngelDashboard', [
     .controller('guardianAngelDashboardController', guardianAngelDashboardController);
 
 function guardianAngelDashboardController($rootScope, $scope, $state) {
-    let self = this;
     $scope.stateObject = {};
     $rootScope.transitionTo = function(nextState, param) {
         if(param) {

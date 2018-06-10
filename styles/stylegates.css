@@ -10,7 +10,12 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
+    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.375;
+    color: #222;
+    background-color: #f9f9f9;
 }
 
 article,
@@ -15646,27 +15651,16 @@ footer .ocf-corp-nav ul.nav.nav-pills li a:hover {
 
 body {
     height: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex
+    display: block;
+    background-color: #efefef;
 }
 
 #main-page {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     min-height: 100vh;
     height: 100%;
-    -webkit-flex-flow: column nowrap;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    width: 100%
+    width: 100%;
+    background-color: #f9f9f9;
 }
 
 #main {
@@ -15738,4 +15732,27 @@ header {
 
 .ocf-doormat ul.ocf-linklist li a:hover {
     text-decoration: underline
+}
+
+#main-area {
+    padding-bottom: 20px;
+}
+
+.btn-primary-yellow {
+    color: #222;
+    background-color: #ffd200;
+    border-color: #e6bd00;
+}
+
+.view-area {
+    background: #fff;
+    border: solid 1px #ddd;
+}
+
+#header {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 1px;
+    margin-bottom: 10px;
+    border: solid 1px #ddd;
 }

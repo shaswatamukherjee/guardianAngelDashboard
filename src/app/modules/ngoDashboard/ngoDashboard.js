@@ -3,33 +3,28 @@ import angular from 'angular';
 export default angular.module('guardianAngelDashboard.main.ngoDashboard', [])
     .controller('ngoDashboard', ngoDashboard)
 
-function ngoDashboard($rootScope, $scope, commonService, $window) {
+function ngoDashboard($scope, $http) {
     var self = this;
     self.init = function () {
-        console.log("Inside init");
-        $window.setTimeout(function(){ self.getUserDetails(); },30000);
+        self.getUserDetails();
+        window.setTimeout(function(){ self.getUserDetails() },30000);
     };
-
-    $scope.userList = [
-        {
-            id: 1,
-            name: 'Ajay',
-            location: 'Mumbai',
-            status: 'Need Help'
-        }, {
-            id: 2,
-            name: 'Rishi',
-            location: 'Netherland',
-            status: 'Need Help'
-        }
-    ];
-
     self.getUserDetails = function(){
-        console.log("Get User Details");
-        commonService.getCall();
+        $http.get('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/getcustomerinneed')
+            .then(response => $scope.userList = response.data)
+            .catch(err => alert(err))
     };
-
-    self.updateStatus = function(){
-      commonService.updateCall();
+    self.rescue = function (customer) {
+        let postData = {
+            data: customer
+        };
+        postData.data.activity = 'RESCUED';
+        postData.data.customerResponse = 'Yes';
+        postData.data.supportingNGO = 'AMREF';
+        $http.put('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/updatestatus', postData)
+            .then(() => {
+                alert('The situation is understood and the victim is rescued');
+                self.getUserDetails()
+            });
     };
 }

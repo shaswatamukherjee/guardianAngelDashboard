@@ -1,23 +1,19 @@
-<div ng-controller="abnAmroDashboard as abnAmroDashboard" ng-init="abnAmroDashboard.init()">
+<div class="view-area" ng-controller="abnAmroDashboard as abnAmroDashboard" ng-init="abnAmroDashboard.init()">
+    <div id="header">
+        <h2>Guardian View</h2>
+    </div>
     <div class="container">
-        <h2>Abn Amro User List</h2>
-        <p>Guardian View</p>
         <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Status</th>
-            </tr>
-            </thead>
             <tbody>
-            <tr ng-repeat="x in userList">
-                <td>{{x.id}}</td>
-                <td>{{x.name}}</td>
-                <td>{{x.location}}</td>
-                <td>{{x.status}}</td>
-            </tr>
+                <tr ng-repeat="x in userList" ng-if="x.activity !== 'CANCEL_ALERT'">
+                    <td>{{x.customerName}}</td>
+                    <td>{{x.location}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-if="x.activity === 'NA'" ng-click="abnAmroDashboard.raiseAlertMessage(x.customerId)">Help</button>
+                        <button class="btn btn-danger" ng-if="x.activity === 'MESSAGE_SENT'" ng-click="abnAmroDashboard.sendAlertToNGO(x)">Publish Alert</button>
+                        <button class="btn btn-default" ng-if="x.activity !== 'CANCEL_ALERT'" ng-click="abnAmroDashboard.cancelCustomerAlert(x)">Cancel</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
