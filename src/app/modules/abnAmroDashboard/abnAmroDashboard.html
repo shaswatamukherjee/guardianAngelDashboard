@@ -1,17 +1,18 @@
 <div class="view-area" ng-controller="abnAmroDashboard as abnAmroDashboard" ng-init="abnAmroDashboard.init()">
     <div id="header">
-        <h2>Guardian View</h2>
+        <h2>Guardian Angel View</h2>
     </div>
     <div class="container">
         <table class="table table-bordered">
             <tbody>
-                <tr ng-repeat="x in userList" ng-if="x.activity !== 'CANCEL_ALERT'">
+                <tr ng-repeat="x in userList">
+                    <td>{{x.reportingDate}}</td>
                     <td>{{x.customerName}}</td>
-                    <td>{{x.location}}</td>
+                    <td>{{abnAmroDashboard.locations[x.location]}}</td>
                     <td>
-                        <button class="btn btn-danger" ng-if="x.activity === 'NA'" ng-click="abnAmroDashboard.raiseAlertMessage(x.customerId)">Help</button>
-                        <button class="btn btn-danger" ng-if="x.activity === 'MESSAGE_SENT'" ng-click="abnAmroDashboard.sendAlertToNGO(x)">Publish Alert</button>
-                        <button class="btn btn-default" ng-if="x.activity !== 'CANCEL_ALERT'" ng-click="abnAmroDashboard.cancelCustomerAlert(x)">Cancel</button>
+                        <button id="raise-alert-button" class="btn btn-danger" ng-disabled="x.isRaiseAlertDisabled" ng-if="x.activity === 'NA'" ng-click="abnAmroDashboard.raiseAlertMessage(x.customerId)">Help</button>
+                        <button id="publish-alert-button" class="btn btn-danger" ng-if="!x.isMarkSafeDisabled" ng-click="abnAmroDashboard.sendAlertToNGO(x)">Publish Alert</button>
+                        <button id="mark-safe-button" class="btn btn-primary-yellow" ng-disabled="x.isMarkSafeDisabled" ng-click="abnAmroDashboard.rescue(x)">{{activity['MARK_SAFE'][x.isMarkSafeDisabled]}}</button>
                     </td>
                 </tr>
             </tbody>

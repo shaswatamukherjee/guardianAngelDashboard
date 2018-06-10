@@ -1,17 +1,34 @@
 import angular from 'angular';
+import locations from '../../messages';
 
 export default angular.module('guardianAngelDashboard.main.abnAmroDashboard', [])
     .controller('abnAmroDashboard', abnAmroDashboard)
 
 function abnAmroDashboard($scope, $http){
     var self = this;
+    self.locations = locations;
+    $scope.activity = {
+        'MARK_SAFE': {
+            'true': 'Safe',
+            'false': 'Mark Safe'
+        }
+    };
     self.init = function () {
         self.getCustomerInNeedDetails();
         window.setTimeout(function(){ self.getCustomerInNeedDetails() },30000);
     };
     self.getCustomerInNeedDetails = function(){
         $http.get('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/getcustomerinneed')
-            .then(response => $scope.userList = response.data)
+            .then(response => {
+                $scope.userList = response.data;
+                $scope.userList.map((value) => {
+                    if(value.activity === 'RESCUED') {
+                        return value.isMarkSafeDisabled = true;
+                    } else {
+                        return value.isMarkSafeDisabled = false;
+                    }
+                })
+            })
             .catch(err => alert(err))
     };
     self.raiseAlertMessage = function (custId) {
@@ -29,19 +46,21 @@ function abnAmroDashboard($scope, $http){
         postData.data.supportingNGO = 'NA';
         $http.put('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/updatestatus', postData)
             .then(() => {
-                alert('The situation is reported to the available NGOs');
                 self.getCustomerInNeedDetails()
             });
     };
-    self.cancelCustomerAlert = function (customer) {
+    self.rescue = function (customer) {
         let postData = {
             data: customer
         };
-        postData.data.activity = 'CANCEL_ALERT';
+        delete postData.data.isMarkSafeDisabled;
+        postData.data.activity = 'RESCUED';
+        postData.data.customerResponse = 'Yes';
+        postData.data.supportingNGO = 'AMREF';
         $http.put('https://prg5uzp18h.execute-api.eu-central-1.amazonaws.com/prod/updatestatus', postData)
             .then(() => {
-                alert('The alert is cancelled for the customer');
-                self.getCustomerInNeedDetails()
+                customer.isMarkSafeDisabled = true;
+                self.getUserDetails()
             });
-    }
+    };
 }

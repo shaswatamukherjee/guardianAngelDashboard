@@ -5,12 +5,12 @@
     <div class="container">
         <table class="table table-bordered">
             <tbody>
-            <tr ng-repeat="x in userList" ng-if="x.activity !== 'RESCUED'">
+            <tr ng-repeat="x in userList">
+                <td>{{x.reportingDate}}</td>
                 <td>{{x.customerName}}</td>
-                <td>{{x.customerLocation}}</td>
-                <td>{{x.description}}</td>
+                <td>{{ngoDashboard.locations[x.location]}}</td>
                 <td>
-                    <button class="btn btn-primary-yellow" ng-click="ngoDashboard.rescue(x)">Mark Safe</button>
+                    <button id="mark-safe-button" class="btn btn-primary-yellow" ng-disabled="x.isMarkSafeDisabled" ng-click="ngoDashboard.rescue(x)">{{activity['MARK_SAFE'][x.isMarkSafeDisabled]}}</button>
                 </td>
             </tr>
             </tbody>

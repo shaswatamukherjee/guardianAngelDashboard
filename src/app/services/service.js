@@ -49,7 +49,8 @@ function commonService($http) {
                 "customerName": value.customerName,
                 "location": value.customerLocation,
                 "description": "The customer is stuck in flood",
-                "activity": "MESSAGE_SENT"
+                "activity": "MESSAGE_SENT",
+                "reportingDate": new Date().toISOString()
             };
         });
         var postData = {data: self.customers};

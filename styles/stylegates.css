@@ -15743,6 +15743,11 @@ header {
     background-color: #ffd200;
     border-color: #e6bd00;
 }
+#mark-safe-button:disabled {
+    color: #fff;
+    background-color: green;
+    border-color: green;
+}
 
 .view-area {
     background: #fff;
