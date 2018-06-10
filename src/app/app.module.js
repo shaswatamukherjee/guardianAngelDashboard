@@ -17,7 +17,7 @@ angular.module('guardianAngelDashboard', [
 
         $stateProvider
             .state('main', { url: '/main', templateUrl: 'app/modules/main/main.module.html' })
-            .state('main.abnAmroDashboard', { url: '/abnAmroDashboard', templateUrl: 'app/modules/abnAmroDashboard/abnamroDashboard.html' })
+            .state('main.abnAmroDashboard', { url: '/abnAmroDashboard', templateUrl: 'app/modules/abnAmroDashboard/abnAmroDashboard.html' })
             .state('main.alert', { url: '/alert?id', templateUrl: 'app/modules/alert/alert.html' })
     })
     .controller('guardianAngelDashboardController', guardianAngelDashboardController);
