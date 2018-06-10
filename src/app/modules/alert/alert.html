@@ -1,7 +1,9 @@
-<form name="application" data-novalidate data-ng-submit ng-controller="alert as alert" ng-init="alert.init()">
-    <div class="col-sm-12">
-        <label>Are you safe : - </label>
-        <button class="btn btn-primary" ng-click="updateStatus(1)">YES</button>
-        <button class="btn btn-primary" ng-click="updateStatus(0)">NO</button>
+<form class="view-area" name="application" data-novalidate data-ng-submit ng-controller="alertController as ac">
+    <div class="container clearfix" style="padding-top: 20px;">
+        <label>We care for our customers. Please report if you are safe in such conditions.</label>
+        <br>
+        <button class="btn btn-primary-yellow" ng-click="ac.updateStatus(1)">YES</button>
+        <button class="btn btn-default" ng-click="ac.updateStatus(0)">NO</button>
     </div>
+    <br>
 </form>

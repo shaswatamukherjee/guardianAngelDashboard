@@ -1,20 +1,16 @@
 import angular from 'angular';
 
-export default angular.module('alert', [])
-    .controller('alert', alert)
+export default angular.module('main.alert', [])
+    .controller('alertController', alertController)
 
-function alert(commonService, $stateParams) {
+function alertController() {
     var self = this;
-    self.init = function () {
-        console.log("Inside Alert : - "+ $stateParams.id);
-
-    };
-
-    self.getCall = function(){
-        commonService.getDetails();
-    };
 
     self.updateStatus = function(status){
-        commonService.updateCall();
+        if(status) {
+            alert('Thanks. We will ensure that you are safe. We will publish your location for urgent help. Be patient and dont panic.');
+        } else {
+            alert('Thanks for your valuable time.');
+        }
     };
 }
